@@ -13,7 +13,8 @@ even_num = even_or_odd(22)
 odd_num = even_or_odd(33)
 
 
-#Medium
+# Medium
+
 # Write a program that evaluates the status of the variables above, and uses logic to print one of three possible messages:
 # - If the driving record is good and user is over 25 years old, they should get a discount on the car rental
 # - If the user either has a good record or is over 25 years old, they should pay full price
@@ -41,3 +42,33 @@ def driver_check(age, record)
 end
 
 driver_check(22, true)
+
+# Spicy
+
+# Write a Ruby program that prints out a String or Integer: The printed value will depend on the value of an Integer. 
+# If the Integer is a multiple of 3, print "Fizz". If the Integer is a multiple of 5, print "Buzz". 
+# If the Integer is a multiple of both 3 and 5, print "FizzBuzz". 
+# If the Integer is not a multiple of either, print the Integer itself.
+
+
+
+def fizz_buzz_check(input)
+  
+    #if integer is multiple of 3 && 5 = "FizzBuzz"
+    if input % 3 == 0 && input % 5 == 0
+        puts "FizzBuzz"
+    #if integer is multple of 5 = "Buzz"
+    elsif input % 5 == 0
+        puts "Buzz"
+    #if integer is multiple of 3 = "Fizz"
+    elsif input % 3 == 0
+        puts "Fizz"
+    #if argument is neither divisible by 3 or 5 = puts argument.
+    else
+        puts input
+    end
+end
+
+#test case... tested the method with numbers from 1 to 30. using this .each method to iterate 1-30 outputing |num| then passing
+#the value of |num| as an argument into the method fiz_buzz_check, replacing my parameter num.
+(1..30).each { |num| fizz_buzz_check(num)}
